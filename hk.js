@@ -23,9 +23,9 @@ const password = "242526";
         await newTab.click("button[type='submit']", { delay: 50 });
         await waitAndClick('a[data-attr1="algorithms"]', newTab);
         await waitAndClick('input[value="warmup"]', newTab);
-        let allChalleges = await newTab.$$('.ui-btn.ui-btn-normal.primary-cta.ui-btn-line-primary.ui-btn-styled', { delay: 50 });
-        console.log(`Total Questioons :`, allChalleges.length);
-        let questionWillBeSolved = await questionSolver(newTab, allChalleges[0], codeObj.answers[0]);
+        let allChallenges = await newTab.$$('.ui-btn.ui-btn-normal.primary-cta.ui-btn-line-primary.ui-btn-styled', { delay: 50 });
+        console.log(`Total Questions :`, allChallenges.length);
+        let questionWillBeSolved = await questionSolver(newTab, allChallenges[0], codeObj.answers[0]);
         return questionWillBeSolved;
     } catch (error) {
         console.log(error);
